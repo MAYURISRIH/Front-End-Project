@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Caddy Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!--------------------------------- main_box ------------------------------------->
+    <div class="main_box">
+        <div class="row">
+            <!--------------------------------- left_column ------------------------------------->
+
+            <div class="col-md-12 col-sm-12 col-lg-5 min-vh-100 pe-0 position-relative left_column">
+                <div class="logo">
+                    <img src="./assets/logo.svg" class='img-fluid'>
+                </div>
+                <!-------------- Top_Card ------------->
+                <div class='row'>
+                    <div class='col d-flex align-items-center justify-content-center'>
+                        <div class=" row mb-2 align-items-center top_box">
+                            <div class=" col login">
+                                <button onclick='handleClick(1)' id='button1' type="button"
+                                    class="login_btn">login</button>
+                            </div>
+                            <div class=" col sign_up">
+                                <button onclick='handleClick(2)' id='button2' type="button" class="login_btn">sign
+                                    up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------ Bottom_Card ------------>
+                <div id='container1' class='align-items-center justify-content-center mb-2 login_container'>
+                    <div class=" row bottom_box">
+                        <div class="col p-0 d-flex align-items-center justify-content-center">
+                            <form class='login_form'>
+                                <div class=" mb-4 position-relative">
+                                    <input type="email" class="form-control" placeholder="name@example.com"
+                                        id="email" />
+                                    <label for="floatingInput" class='form_lable'>Email</label>
+                                    <div class='mt-1 email_helper_text' id="email_helper_text">
+                                        <span>Invalid mail id</span>
+                                    </div>
+                                    <img src="./assets/tick.png" class='tick_img' id="tick_icon">
+                                    <img src="./assets/erorr.png" class='tick_img' id="error_icon">
+                                </div>
+                                <div class="mb-4 position-relative">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Enter your password">
+                                    <label for="floatingPassword" class='form_lable_password'>Password</label>
+                                    <img onclick='showPassword()' src="./assets/open_eye.png" class='eye_icon'>
+                                    <div class='password_helper_text mt-1' id="password_helper_text">
+                                        <span>Incorrect password</span>
+                                    </div>
+                                    <div class='d-flex align-items-center justify-content-end mt-2'>
+                                        <a href="" class='forget_password'>Forgot Password?</a>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <div class='mt-3'>
+                                    <button type="button" class="btn btn-outline-primary login_btn_summit"
+                                        id="login_btn" onclick='login()'>Login</button>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center my-3 left_bottom_area">
+                                    <span>OR</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                                    <a href="">
+                                        <img class='img-fluid' src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class='img-fluid' src="./assets/Facebook.png" alt="">
+                                    </a>
+                                </div>
+                                <div class='d-flex align-items-center justify-content-center bottom_sign_up'>
+                                    <span>Don’t have an account? <a href="">Sign Up</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------sign_up--------------------- -->
+
+                <div id='container2' class='align-items-center justify-content-center mb-2 login_container'>
+                    <div class=" row bottom_box">
+                        <div class="col p-0 d-flex align-items-center justify-content-center">
+                            <form class='sign_up_form'>
+
+                                <div class="row sign_up_name_field position-relative">
+                                    <div class="col mb-3">
+                                        <input type="text" class="sign_up_form_control form-control input"
+                                            id="firstName" placeholder="Enter your first name">
+                                        <label for="floatingInput" class='form_lable_sign_up_first'>First
+                                            Name</label>
+                                    </div>
+                                    <div class="col mb-3 position-relative">
+                                        <input type="text" class="sign_up_form_control form-control input" id="lastName"
+                                            placeholder="Enter your last name">
+                                        <label for="floatingInput" class='form_lable_sign_up_last'>Last Name</label>
+                                    </div>
+                                </div>
+
+                                <div class=" mb-3 position-relative">
+                                    <input type="text" class="form-control mail_areas input" id="floatingInput"
+                                        placeholder="Enter your company">
+                                    <label for="floatingInput" class='form_lable_sign_up_company'>Company</label>
+                                </div>
+
+                                <div class=" mb-3 position-relative">
+                                    <input type="email" class="form-control mail_areas input" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput" class='form_lable_sign_up_email'>Email</label>
+                                    <img src="./assets/tick.png" class='tick_img'>
+                                </div>
+
+                                <div class=" mb-3 position-relative">
+                                    <input type="password" class="form-control mail_areas input" id="floatingInput"
+                                        placeholder="Enter your password">
+                                    <label for="floatingInput" class='form_lable_sign_up_password'>Password</label>
+                                    <img src="./assets/open_eye.png" class='open_eye_sign_up'>
+                                </div>
+
+                                <div class=" mb-3 position-relative">
+                                    <input type="password" class="form-control  mail_areas input" id="floatingInput"
+                                        placeholder="Enter your re-password">
+                                    <label for="floatingInput" class='form_lable_sign_up_rePassword'>Re-Password</label>
+                                    <img src="./assets/open_eye.png" class='open_eye_sign_up'>
+                                </div>
+                                <div class='d-flex align-items-center justify-content-center'>
+                                    <div class="form-check_sign_up">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I’ve read and accept the <span>TERMS & CONDITIONS</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class='mt-3'>
+                                    <button type="button" class="btn btn-outline-primary login_btn_summit"
+                                        data-toggle="modal" data-target="#exampleModalCenter" id="signup_btn">Create
+                                        Your
+                                        Account</button>
+                                </div>
+                                <div class='d-flex align-items-center justify-content-center mt-2 bottom_sign_up '>
+                                    <span>Already have an account? <a href="">Sign in</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/left-column/bottom_circle.png" class='img-fluid left_bottom_circle'>
+                <img src="./assets/left-column/bottom_star.png" class='img-fluid left_bottom_star'>
+                <img src="./assets/left-column/right_half_circle.png" class='img-fluid left_right_circle'>
+                <img src="./assets/left-column/right_arrow.png" class='img-fluid left_right_arrow'>
+                <img src="./assets/left-column/center_wave.png" class='img-fluid left_center_wave'>
+                <img src="./assets/left-column/left_half_circle.png" class='img-fluid left_half_circle'>
+
+                <!---------------------- Modal ---------------------------->
+                <div class="modal-container" id="modal-container">
+                    <div class="modal-wrapper">
+                        <div class="modal-content">
+                            <div class="row">
+                                <div class="col col-lg-5 col-md-5">
+                                    <img src="./assets/modal_img.png" class='img-fluid'>
+                                </div>
+                                <div class="col col-lg-7 col-md-7">
+                                    <h1>Your account has been create successfully</h1>
+                                    <button class="btn btn-outline-primary mt-3"
+                                        id="sign_up_modal_close_btn">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------------- right_column ------------------------------------->
+
+            <div
+                class="col-lg-7 col-sm-0 col-md-0 min-vh-100 d-flex align-items-center position-relative justify-content-center right_column">
+                <div class="carousel">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img src="./assets/carousel_1.png" class="d-block w-100 img-fluid" alt="...">
+                                <h1 class='mt-4'>Software Development</h1>
+                                <p class='mt-1'>Lorem ipsum dolor sit amet consectetur. Quam pulvinar nibh sed dapibus
+                                    tortor lectus.
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./assets/carousel_2.png" class="d-block w-100 img-fluid" alt="...">
+                                <h1 class='mt-4'>Software Performance</h1>
+                                <p class='mt-1'>Lorem ipsum dolor sit amet consectetur. Quam pulvinar nibh sed dapibus
+                                    tortor lectus.
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./assets/carousel_3.png" class="d-block w-100 img-fluid" alt="...">
+                                <h1 class='mt-4'>Client Satisfaction</h1>
+                                <p class='mt-1'>Lorem ipsum dolor sit amet consectetur. Quam pulvinar nibh sed dapibus
+                                    tortor lectus.
+                                </p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <img src="./assets/right-column/right_center_round.png" class='img-fluid right_center_round'>
+                <img src="./assets/right-column/right_stars.png" class='img-fluid right_top_stars'>
+                <img src="./assets/right-column/right_left_half_circle.png" class='img-fluid right_left_circle'>
+                <img src="./assets/right-column/bottom_circle.png" class='img-fluid right_bottom_circle'>
+                <img src="./assets/right-column/right_half_circle.png" class='img-fluid right_half_circle'>
+                <img src="./assets/right-column/right_bottom_stars.png" class='img-fluid right_bottom_stars'>
+            </div>
+        </div>
+    </div>
+
+    <script src='./js/index.js'></script>
+
+    <!---------------- Bootstrap ------------------>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* ----------id_style----------- */
+
+#container1,
+#container2 {
+    display: flex;
+}
+
+/* -------------------------------left_column----------------------------------- */
+
+.left_column {
+    background-color: #E3E3E3;
+}
+
+.logo {
+    margin: 20px 0 40px 70px;
+}
+
+.top_box {
+    width: 80%;
+    height: 70px;
+    border-radius: 15px;
+    background: var(--c-2, #FFF);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+    z-index: 1;
+}
+
+.top_box button.active {
+    background: linear-gradient(346deg, #3662A5 0%, #375B92 100%);
+    color: #fff;
+}
+
+.bottom_box {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    background: var(--c-2, #FFF);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+    z-index: 1;
+}
+
+.login_btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.login_form {
+    margin: 32px 0;
+    width: 80%;
+    position: relative;
+}
+
+.form-control {
+    border: 1px solid #B7B7B7;
+    padding: 16px 50px 16px 26px !important;
+    outline: none;
+}
+
+.form-control.error {
+    border: 1px solid red;
+}
+
+
+.form_lable {
+    position: absolute;
+    top: -10px;
+    width: 60px;
+    left: 10%;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.tick_img {
+    position: absolute;
+    top: 18px;
+    right: 6%;
+    width: 14px;
+    height: 14px;
+    display: none;
+}
+
+.form_lable_password {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    width: 94px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.eye_icon {
+    position: absolute;
+    top: 20px;
+    right: 6%;
+    cursor: pointer;
+    display: block;
+}
+
+::-webkit-input-placeholder {
+    color: #C6C6C6 !important;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #FFF;
+}
+
+::-webkit-input-placeholder:focus {
+    background: #fff;
+}
+
+.login_form .email_helper_text,
+.login_form .password_helper_text {
+    color: #F52;
+    font-size: 0.75rem;
+    font-weight: 400;
+    display: none;
+}
+
+.login_form a {
+    color: #C6C6C6;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.form-check label {
+    color: #C6C6C6;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form-check-input[type="checkbox"] {
+    border-radius: 5px;
+    background: #D9D9D9;
+    appearance: #FFF;
+}
+
+.form-check-input[type="checkbox"]:checked {
+    position: relative;
+    appearance: inherit;
+    -webkit-appearance: listbox;
+    background-color: #D9D9D9;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login_btn_summit {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background: linear-gradient(346deg, #3662A5 0%, #375B92 100%);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+    border: none;
+    color: var(--c-2, #FFF);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.left_bottom_area span {
+    color: #C6C6C6;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.bottom_sign_up span {
+    color: #C6C6C6;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.bottom_sign_up a {
+    color: #3662A5;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+/* -------------------------------sing_up-------------------------- */
+
+.sign_up_form {
+    margin: 32px 0;
+    width: 85%;
+}
+
+.sign_up_form_control {
+    width: 100%;
+    border: 1px solid #B7B7B7;
+    padding: 12px 16px !important;
+    outline: none;
+    border-radius: 6px;
+    background: var(--c-2, #FFF);
+}
+
+.sign_up_name_field {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.form_lable_sign_up_first,
+.form_lable_sign_up_last {
+    position: absolute;
+    top: -9px;
+    width: 90px;
+    left: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.form_lable_sign_up_company {
+    position: absolute;
+    top: -9px;
+    width: 90px;
+    left: 34px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.form_lable_sign_up_email {
+    position: absolute;
+    top: -10px;
+    width: 62px;
+    left: 36px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.form_lable_sign_up_password {
+    position: absolute;
+    top: -10px;
+    width: 88px;
+    left: 36px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.form_lable_sign_up_rePassword {
+    position: absolute;
+    top: -10px;
+    width: 114px;
+    left: 36px;
+    background: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.open_eye_sign_up {
+    position: absolute;
+    top: 16px;
+    right: 6%;
+}
+
+.form-check_sign_up {
+    color: #C6C6C6;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form-check_sign_up span {
+    color: #375B92;
+}
+
+.mail_areas {
+    border: 1px solid #B7B7B7;
+    padding: 12px 50px 12px 26px !important;
+    outline: none;
+}
+
+.left_bottom_circle {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.left_bottom_star {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.left_right_circle {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+}
+
+.left_right_arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.left_center_wave {
+    position: absolute;
+    top: 60px;
+    left: 40%;
+}
+
+.left_half_circle {
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+/* -----------------modal pop_up ------------------------------ */
+.modal-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.20);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 9999;
+}
+
+.modal-wrapper {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 40%;
+    transition: all 0.3s;
+}
+
+.modal-content h1 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.modal-content button {
+    border-radius: 15px;
+    background: linear-gradient(147deg, #375B92 0%, #3662A5 100%);
+    color: #FFF;
+    border: none;
+    padding: 0.75rem 4rem;
+}
+
+/* -------------------------------Right_column----------------------------------- */
+
+.right_column {
+    background: linear-gradient(151deg, #3660A0 0%, #375B92 100%);
+    position: relative;
+}
+
+.carousel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    z-index: 1;
+}
+
+.carousel h1 {
+    color: #FFF;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.carousel p {
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.right_center_round {
+    position: absolute;
+    top: 60px;
+    left: 16%;
+    width: 65%;
+    height: 80%;
+}
+
+.right_top_stars {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right_left_circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right_bottom_circle {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+.right_half_circle {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+
+.right_bottom_stars {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+}
+
+
+/*-------------- Responsive ----------------------*/
+
+@media (max-width: 992px) {
+    .left_column {
+        width: 100% !important;
+    }
+
+    .right_column {
+        display: none !important;
+    }
+}
