@@ -1,0 +1,202 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./reportstary.css">
+  <link rel="stylesheet" href="./navbar.css" />
+  <!-- <link rel="stylesheet" href="./introSection.css"> -->
+  <!-- <link rel="stylesheet" href="./mobileView.css"> -->
+  <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+  <title>Admin Page</title>
+</head>
+
+<body>
+
+  <header
+  class=" text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center lg:justify-around">
+  <div class="flex flex-row items-center md:flex-row md:items-center p-5" id="logo">
+    <span class="mission-1"> Saving Lives </span>
+    <a class="logo-border" href="./index.html">
+      <img class="rounded-full logo-size" src="./Assets/Images/logo.jpg" alt="logo" />
+    </a>
+    <span class="mission-2"> Saving Animals </span>
+    <!--
+    <div class="w-full mt-8 md:mt-0">
+      <h1 class="text-4xl text_2  text-center md:text-left md:ml-12 uppercase font-serif font-bold " id = "heading-adopt-me">Adopt
+        today!</h1>
+      <p class="text-lg text-gray-400 text-center md:text-left md:ml-12 mt-2">Give life to a needed animal</p>
+    </div> -->
+  </div>
+  <button data-collapse-toggle="navbar-default" type="button"
+    class="absolute top-4 right-4 sm:inline-flex sm:items-center p-2 lg:hidden  focus:outline-none  text_4 "
+    aria-controls="navbar-default" aria-expanded="false" id="nav-button">
+    <span class="sr-only">Open Main Menu</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd"
+        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </button>
+  <nav class="">
+    <div class="hidden w-full lg:block z-0" id="navbar">
+      <ul
+        class="w-[100vw] h-1/2 top-0 right-0 p-4 text-center space-y-8 lg:space-y-0 lg:space-x-3 lg:static lg:w-auto flex flex-col rounded-lg border border-gray-100 items-center lg:bg-transparent lg:border-0 lg:flex-row justify-center">
+        <li><a href="./index.html"
+            class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Home</a></li>
+        <li><a href="./index.html#About"
+            class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">About Us</a>
+        </li>
+        <li><a href="./blog.html"
+            class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Blogs</a></li>
+        <li><a href="./donate.html"
+            class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Donate
+            Animals</a></li>
+        <li>
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <a @mouseover="open = true"
+              class="p-3 text-custom-heading flex font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">
+              Support Us
+              <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" class="mt-1">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+
+            <div x-show="open" class="z-20 absolute -left-1 w-[7.5rem] py-2 bg-gray-100 rounded-md shadow-xl">
+
+              <a href="volunteer.html"
+                class=" block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">Become
+                a Volunteer</a>
+
+            </div>
+          </div>
+        </li>
+        <li><a href="./reportstary.html"
+            class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">SOS
+            Report</a></li>
+
+
+
+        <li><a href="./index.html#contact">
+            <button
+              class="inline-flex items-center bg-header-orange-light border-0 py-4 px-2 focus:outline-none text_4 font-bold rounded text-base mt-4 md:mt-0">
+              Contact Us
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </a>
+        </li>
+
+        <li>
+
+          <button id="theme-toggle" class=" text_4">
+            Toggle Theme
+          </button>
+        </li>
+      </ul>
+      
+    </div>
+
+  </nav>
+  </header>
+<body>
+  <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+  <h1>Welcome Admin!!</h1>
+  </div>
+<label for="message" class="text-lg ml-10 mt-8 mb-6 w-10/12">Upload a new image</label>
+                <div class="max-w-3xl">
+                  <label
+                    class="flex justify-center w-full h-32 ml-4 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+                    <span class="flex items-center space-x-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-900" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                      </svg>
+                    <input type="file" name="file_upload" class="" />
+                  </label>
+  <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+        <h1>BONGO </h1>
+    </div>
+    <div>
+       <img class="relative ml-14 w-56 h-56  object-cover rounded-2xl shadow-lg shadow-red-700/50 " src="Assets/Images/goldern-ret.jpg" > 
+    </div>
+
+    <div class="text-lg ml-10 mt-8 mb-25 w-10/12">
+        <p>Age : 8 years</p>
+<p>Sex : Male</p> 
+<p>Golden retrievers dog that is rescued from Delhi railway station . After regular medications Bongo is healthy and ready to have a new home and new life.</p>
+    </div>
+    <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+        <h1>ROBLET </h1>
+    </div>
+    <div>
+       <img class="relative ml-14 w-56 h-56  object-cover rounded-2xl shadow-lg shadow-red-700/50 " src="Assets/Images/pug.jpg" > 
+    </div>
+
+    <div class="text-lg ml-10 mt-8 mb-25 w-10/12">
+        <p>Age : 8 years</p>
+<p>Sex : Male</p> 
+<p>Pug dog that is rescued from Lucknow found wounded and injured in Highways . After regular check ups and medications Roblet is ready to get adopted and have a safe place to live his rest of the life.</p>
+    </div>
+    <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+        <h1>SIPPER </h1>
+    </div>
+    <div>
+       <img class="relative ml-14 w-56 h-56  object-cover rounded-2xl shadow-lg shadow-red-700/50 " src="Assets/Images/husky.jpg" > 
+    </div>
+
+    <div class="text-lg ml-10 mt-8 mb-25 w-10/12">
+        <p>Age : 7 years</p>
+<p>Sex : Male</p> 
+<p>Brown husky dog that has been donated to our shelter. Due to his owner health issues he can’t be taken care properly. Sipper is active and healthy, ready to get adopted.</p>
+        <p>SIPPER owner details :</p>
+<p>Name - Ram</p>
+<p>Contact number - 9224556544</p> 
+<p>Jammu and Kashmir</p>    
+    </div> 
+    <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+        <h1>RUSSIA </h1>
+    </div>
+    <div>
+       <img class="relative ml-14 w-56 h-56  object-cover rounded-2xl shadow-lg shadow-red-700/50 " src="Assets/Images/ragdo.jpg" > 
+    </div>
+
+    <div class="text-lg ml-10 mt-8 mb-25 w-10/12">
+        <p>Age : 2.5 years</p>
+<p>Sex : Female</p> 
+<p>A white ragdoll cat that is rescued from the highways at Karnataka. After regular check ups and medications Russia is healthy and active to have a new home.</p>
+    </div> 
+    <div class="text-lg ml-10 mt-8 mb-6 w-10/12">
+        <h1>RISKY </h1>
+    </div>
+    <div>
+       <img class="relative ml-14 w-56 h-56  object-cover rounded-2xl shadow-lg shadow-red-700/50 " src="Assets/Images/angora.jpg" > 
+    </div>   
+    <div class="text-lg ml-10 mt-8 mb-28 w-10/12">
+        <p>Age : 0.5 years</p>
+<p>Sex : Female</p> 
+<p>Angora white rabbit was donated to the shelter by her owner. Riksy is young and active to get adopted and have a new life..</p>
+        <p>Riksy owner details :</p>
+<p>Name - Noor</p>
+<p>Contact number - 8979604312</p> 
+<p>Jammu and Kashmir</p>    
+    </div> 
+
+
+
+  
+
+  <script src="index.js"></script>
+  <script src="light-dark-theme.js"></script>
+  <script src="blog.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>
